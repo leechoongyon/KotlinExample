@@ -19,7 +19,7 @@ apply(plugin = "io.spring.dependency-management")
 
 group = "simple"
 version = "1.0-SNAPSHOT"
-java.sourceCompatibility = JavaVersion.VERSION_19
+java.sourceCompatibility = JavaVersion.VERSION_17
 
 
 repositories {
@@ -48,6 +48,9 @@ dependencies {
     kaptTest("org.mapstruct:mapstruct-processor:1.5.2.Final")
 
     testImplementation(kotlin("test"))
+
+    testImplementation("com.navercorp.fixturemonkey:fixture-monkey-starter:0.5.0")
+    testImplementation("com.navercorp.fixturemonkey:fixture-monkey-jackson:0.5.0")
 }
 
 tasks.test {
